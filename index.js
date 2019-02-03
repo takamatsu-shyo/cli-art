@@ -2,9 +2,13 @@
 
 /*
 TODO README
-TODO All genre
 TODO Option -y
+Are you over eighteen and willing to see content [Y/n]? y
+N: You are not in the 18+ file.  This incident will be reported.
+TODO Message
+Tone of this art unsuitable for minors.
 TODO Option -p, -a, -m, -h
+TODO Help
 */
 
 const https = require('https');
@@ -47,7 +51,7 @@ function gen_url(genre){
 
 var gen_sw = ['p', 'a', 'h', 'm'];
 
-https.get(url = gen_url( gen_sw[ Math.floor(Math.random() * 3 ) ] ), (resp) => {
+https.get(url = gen_url(gen_sw[Math.floor(Math.random()*3)]), (resp) => {
 
 		let data = '';
 
